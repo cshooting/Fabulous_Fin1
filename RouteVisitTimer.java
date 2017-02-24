@@ -100,17 +100,17 @@ public class RouteVisitTimer extends TextView {
     public OnChronometerTickListener getOnChronometerTickListener() {
         return mOnChronometerTickListener;
     }
-
+//开始计时
     public void start() {
         mStarted = true;
         updateRunning();
     }
-
+//停止计时
     public void stop() {
         mStarted = false;
         updateRunning();
     }
-
+//重置时间
     public void setStarted(boolean started) {
         mStarted = started;
         updateRunning();

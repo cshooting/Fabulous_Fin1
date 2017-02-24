@@ -24,14 +24,23 @@ import android.widget.ImageButton;
  */
 
 public class TrainingFragment extends Fragment {
-    private ImageButton mbtn_strat;
+    private ImageButton mbtn_girl;
+    private ImageButton mbtn_boy;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.mtab_training, container, false);
-        mbtn_strat = (ImageButton) v.findViewById(R.id.btn_start);
-        mbtn_strat.setOnClickListener(new View.OnClickListener() {
+        mbtn_girl = (ImageButton) v.findViewById(R.id.btn_girl);
+        mbtn_boy = (ImageButton) v.findViewById(R.id.btn_boy);
+        mbtn_girl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), TrainingActivity.class);
+                startActivity(intent);
+            }
+        });
+        mbtn_boy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), TrainingActivity.class);
